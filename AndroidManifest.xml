@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.se.uta_rides"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!--
+  IMPORTANT: Change "com.parse.tutorials.pushnotifications.permission.C2D_MESSAGE" in the lines below
+  to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.se.uta_rides.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.se.uta_rides.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.se.uta_rides.ParseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/uta_rides"
+        android:label="@string/app_name" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBXQ485GE0oiMPciR1YR7NihwhpRAEtObk" />
+
+        <activity
+            android:name="com.se.uta_rides.RideConfirmActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.RideConfirmActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+        <activity
+            android:name="com.example.pushparse.test"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.pushparse.test" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        -->
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.tutorials.pushnotifications" to match your app's package name. -->
+                <category android:name="com.se.uta_rides" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.se.uta_rides.Receiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="com.parse.push.intent.DELETE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.LOGINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupActivity" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.SIGNUPACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GeneratePassword" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.GENERATEPASSWORD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PasswordResetting" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.PASSWORDRESETTING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LaunchActivity"
+            android:label="@string/activityLaunch" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.LAUNCHACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ViewRideDetails" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.VIEWRIDEDETAILS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/activitySearch" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.SEARCHACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoadAvailableListActivity"
+            android:label="@string/actvitiyAvailable" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.LOADAVAILABLELISTACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConnectDBActivity"
+            android:label="@string/activityDB" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.CONNECTDBACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CarOwnersDetailsActivity"
+            android:label="@string/activityCarOwnersDetails" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.CAROWNERSDETAILSACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CarOwnerSetAvailbleActivity"
+            android:label="@string/activityCarOwnerSetAvailable" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.CAROWNERSETAVAILABLEACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SelectedUserDetails"
+            android:label="@string/selecteduserDetails" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.SELECTEDUSERDETAILS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".maps.MapsActivity"
+            android:label="@string/activityCarOwnerSetAvailable" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.maps.MAPSACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewRequestsActivity"
+            android:label="@string/view_request" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.VIEWREQUESTSACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SelectedCustomerDetails"
+            android:label="@string/view_request" >
+            <intent-filter>
+                <action android:name="com.se.uta_rides.SELECTEDCUSTOMERDETAILS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="WidgetActivity"
+            android:exported="false"
+            android:icon="@drawable/green_car_icon" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.imranandroid.demo.ACTION_ON_ImG_CLICK" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget" />
+        </receiver>
+    </application>
+
+</manifest>

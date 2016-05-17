@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg_grad" >
+
+    <Spinner
+        android:id="@+id/dayDropDownList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:id="@+id/buttonEndTime"
+        style="@style/NiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textEndTime"
+        android:layout_alignParentRight="true"
+        android:text="@string/buttonEndTime" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        style="@style/NiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textNumberOfSeats"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:ems="5"
+        android:text="@string/buttonSave" />
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        style="@style/NiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonSave"
+        android:layout_alignBottom="@+id/buttonSave"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/buttonSave"
+        android:ems="5"
+        android:text="@string/buttonUpdate" />
+
+    <Button
+        android:id="@+id/buttonMapSetAvailable"
+        style="@style/NiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textDestinationSetAvailable"
+        android:layout_alignParentRight="true"
+        android:text="@string/buttonMapSetAvailable"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/textNumberOfSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textEndTime"
+        android:layout_below="@+id/textEndTime"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:hint="Enter Number of Seats"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/textDestinationSetAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textStartTime"
+        android:layout_below="@+id/textStartTime"
+        android:layout_marginTop="50dp"
+        android:ems="8"
+        android:hint="@string/textMapHint"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/textStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:hint="Enter Start Time"
+        android:inputType="time" />
+
+    <Button
+        android:id="@+id/buttonStartTime"
+        style="@style/NiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textStartTime"
+        android:layout_alignBottom="@+id/textStartTime"
+        android:layout_alignParentRight="true"
+        android:text="@string/buttonStartTime" />
+
+    <EditText
+        android:id="@+id/textEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textDestinationSetAvailable"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Enter End Time"
+        android:inputType="time" />
+
+</RelativeLayout>

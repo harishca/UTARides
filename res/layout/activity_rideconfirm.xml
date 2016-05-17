@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/blue_bg_grad"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/confirmButton"
+        style="@style/NiceButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rejectButton"
+        android:layout_alignBottom="@+id/rejectButton"
+        android:layout_alignLeft="@+id/location"
+        android:text="Accept Ride" />
+
+    <Button
+        android:id="@+id/rejectButton"
+        style="@style/NiceButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="88dp"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/confirmButton"
+        android:text="Reject Ride" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/confirmButton"
+        android:layout_alignLeft="@+id/time"
+        android:layout_marginBottom="49dp"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/location"
+        android:layout_alignLeft="@+id/date"
+        android:layout_marginBottom="34dp"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/time"
+        android:layout_alignLeft="@+id/name"
+        android:layout_marginBottom="36dp"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/date"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="45dp"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+</RelativeLayout>

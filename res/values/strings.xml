@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UTA RIDES</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Sign Out</string>
+    <string name="view_request">View Requests</string>
+    <string name="selecteduserDetails">Selected User Details</string>
+
+    <color name="highlightedTextViewColor">#000088</color>
+    <color name="normalTextViewColor">#000044</color>
+
+    <!-- activity_welcome.xml -->
+    <string name="buttonLogIn">Log In</string>
+    <string name="buttonSignUp">Sign Up</string>
+    <string name="slogan">We Make Booking Simple</string>
+
+    <!-- activity_generatepassword.xml -->
+    <string name="phone_label">Phone number</string>
+
+    <!-- activity_rsetpassword.xml -->
+    <string name="Password">New password</string>
+    <string name="Confirm">Confirm password</string>
+    <string name="RESET">RESET</string>
+    
+    <!-- activity_carowner_set_available.xml -->
+    <string name="activityCarOwnerSetAvailable">Please Set Your Preference</string>
+    <string name="textStartTime">Choose Start Time</string>
+    <string name="textEndTime">Choose End Time</string>
+    <string name="buttonStartTime">Start</string>
+    <string name="buttonEndTime">End</string>
+    <string name="buttonMapSetAvailable">Map</string>
+    <string name="buttonSave">Save</string>
+    <string name="buttonUpdate">Update</string>
+
+    <string-array name="dayDropDownList">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string-array name="favSpotDropDownList">
+        <item>Walmart</item>
+        <item>India Bazaar</item>
+        <item>Bombay Bazaar</item>
+        <item>Patel Shop</item>
+        <item>Kroger</item>
+        <item>Target</item>
+        <item>China Town</item>
+    </string-array>
+
+    <!-- activity_search.xml -->
+    <string name="activitySearch">Search for a Ride</string>
+    <string name="textDateAndTime">Select Date and Time</string>
+    <string name="buttonDate">Date</string>
+    <string name="buttonMap">Map</string>
+    <string name="buttonTime">Time</string>
+    <string name="textDateHint">Select Date</string>
+    <string name="textTimeHint">Select Time</string>
+    <string name="textMapHint">Select Destination</string>
+    <string name="buttonSearch">Search Availability</string>
+    <string name="buttonWishList">Add to Wishlist</string>
+    <string name="createRequest">Create Request</string>
+    <string name="buttonconnectDB">Connect to DB</string>
+
+    <string-array name="favDestDropDownList">
+        <item>Walmart</item>
+        <item>India Bazaar</item>
+        <item>Bombay Bazaar</item>
+        <item>Patel Shop</item>
+        <item>Kroger</item>
+        <item>Target</item>
+        <item>China Town</item>
+    </string-array>
+
+    <!-- activity_median.xml -->
+    <string name="activityMedian">Available Rides</string>
+    <string name="textMedian">Name</string>
+
+    <!-- activity_db.xml -->
+    <string name="activityDB">DB Connect Check</string>
+    <string name="textDB">Found It!!!</string>
+
+    <!-- activity_splash.xml -->
+    <string name="splashText">UTA Rides</string>
+
+    <!-- activity_available.xml -->
+    <string name="actvitiyAvailable">Available Rides</string>
+    <string name="listAvailable">Car Owner</string>
+    <string name="Login"> Login Page</string>
+    <string name="password"> Password</string>
+    <string name="username"> User Name</string>
+    <string name="welcome">WELCOME !!</string>
+    <string name="sign">signup</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="Name">Name</string>
+    <string name="register">Register</string>
+
+    <color name="blue">#3366CC</color>
+
+    <!-- activity_carowner_details.xml -->
+    <string name="activityCarOwnersDetails">Ride Details</string>
+    <string name="riderName">Name</string>
+    <string name="riderNumber">Phone Number</string>
+    <string name="riderFromTime">From Time</string>
+    <string name="riderToTime">To Time</string>
+
+    <!-- activity_launch.xml -->
+    <string name="activityLaunch">Select your Preference</string>
+    <string name="launchStudent">Book a Ride</string>
+    <string name="launchCarOwner">Provide a Ride</string>
+    <string name="viewBookedRides">View Booked Rides</string>
+
+    <!-- activity_add_user.xml -->
+    <string name="activityAddUser">Add a User</string>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>
